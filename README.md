@@ -20,7 +20,7 @@ To install MySQL on your local machine, execute the following commands:
 
 You are all set with your database now. To create a table with all the data, from the project/solution directory:
 
-####Usage
+###Usage
 
 ```sh
 $ python <name_of_script> <host> <user> <password> <database>
