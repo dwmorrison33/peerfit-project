@@ -19,8 +19,11 @@ Output:
 2. Which studio has the highest rate of reservation abandonement (did not cancel but did not check-in)?
 
 Found answer by the following query:
+```sh
 select studio_key, count(*) as reservation_abandonment from peerfit_project where signed_in_at = '0000-00-00 00:00:00' and canceled = 0 group by studio_key order by reservation_abandonment desc;
+```
 Output:
+```sh
 +-------------------------------------+-------------------------+
 | studio_key                          | reservation_abandonment |
 +-------------------------------------+-------------------------+
@@ -36,12 +39,15 @@ Output:
 | yoga-pose                           |                       1 |
 | soho-cycling                        |                       1 |
 +-------------------------------------+-------------------------+
-
+```
 3. Which fitness area (i.e., tag) has the highest number of completed reservations for February?
 
 Found answer by the following query:
+```sh
 select class_tag, count(*) as completed_reservation from peerfit_project where signed_in_at between '2018-02-01 00:00:00' and '2018-03-01 00:00:00' group by class_tag order by completed_reservation desc;
+```
 Output:
+```sh
 +-----------+-----------------------+
 | class_tag | completed_reservation |
 +-----------+-----------------------+
@@ -51,18 +57,21 @@ Output:
 | crossfit  |                     5 |
 | endurance |                     2 |
 +-----------+-----------------------+
-
+```
 4. How many members completed at least 1 reservation and had no more than 1 canceled reservation in January?
 
 Found answer by the following query:
+```sh
 select count(distinct member_id) from peerfit_project where reserved_for between '2018-01-01 00:00:00' and '2018-02-01 00:00:00' and canceled = 0;
+```
 Output:
+```sh
 +---------------------------+
 | count(distinct member_id) |
 +---------------------------+
 |                        24 |
 +---------------------------+
-
+```
 
 
 ### Project Discussion
