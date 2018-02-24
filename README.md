@@ -11,7 +11,7 @@ First, we need to create a virtualenv and activate it.
 Now that you have the necessary python packages, clone the repo git@gitlab.com:dwmorrison33/peerfit-project.git and setup MySQL on your local machine.
 
 To install MySQL on your local machine, execute the following commands:
-1. **sudo apt-get update
+1. **sudo apt-get update**
 2. sudo apt-get install mysql-server
 3. You need to start server like: sudo service mysql restart and then check status like: sudo service mysql status
 4. Sign in with the root user like:
