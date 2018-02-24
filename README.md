@@ -1,18 +1,34 @@
 ## Data Interview Project
 
-First, we need to create a virtualenv and activate it.
+#### Create a virtual environment for your python packages
 
-1. **pip install virtualenv**
-2. from desired directory: **virtualenv peerfit_project**
-3. **source peerfit_project/bin/activate**
-4. Your virtual environment should now be activated
-5. From project directory, run: **pip install -r requirements.txt**
+```sh
+$ pip install virtualenv
+```
 
+**From desired directory:**
+```sh
+$ virtualenv peerfit_project
+```
+
+**Activate virtualenv**
+```sh
+$ source peerfit_project/bin/activate
+```
+Your virtual environment should now be activated
+
+**Install required packages**
+```sh
+pip install -r requirements.txt**
+```
 Now that you have the necessary python packages, clone the repo git@gitlab.com:dwmorrison33/peerfit-project.git and setup MySQL on your local machine.
 
-To install MySQL on your local machine, execute the following commands:
-1. **sudo apt-get update**
-2. **sudo apt-get install mysql-server**
+#### MySQL installation
+
+```sh
+$ sudo apt-get update
+$ sudo apt-get install mysql-server
+```
 3. You need to start server like: **sudo service mysql restart** and then check status like: **sudo service mysql status**
 4. Sign in with the root user like:
 	**mysql -u root -p**
