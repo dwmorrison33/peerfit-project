@@ -38,16 +38,22 @@ def connect_to_db(hostname, username, password, database):
     return db, cursor
 
 def row_from_club_ready_csv_is_valid(data):
+    """
+        NOTE, all invalid datetimes will be NULL in db
+        NULL datetime values are stored in db like 0000-00-00 00:00:00
+    """
     # valid data has a length of 8
     if len(data) != 8:
-        print data
         # need to log errant data to error.log
         return False
     else:
         return True
 
-# we need to transform the data before inserting into db
 def transform_club_ready_csv_data(data):
+    """
+        data is a list of lists, we are gonna iterate over those
+        lists to formulate data into a list of dicts to store in db
+    """
     column_names = data[0]
     all_data = []
     updated_data = {}
@@ -62,21 +68,26 @@ def transform_club_ready_csv_data(data):
     return all_data
 
 def row_from_mbo_csv_is_valid(data):
+    """
+        NOTE, all invalid datetimes will be NULL in db
+        NULL datetime values are stored in db like 0000-00-00 00:00:00
+    """
     # valid data has a length of 12
     if len(data) != 12:
-        print data
         # need to log data to error.log
         return False
     # must have a value for first index
     if not data[0]:
-        print data
         # need to log errant data to error.log
         return False
     else:
         return True
 
-# we need to transform the data for mbo csvs as well
 def transform_mbo_csv_data(data):
+    """
+        data is a list of lists, we are gonna iterate over those
+        lists to formulate data into a list of dicts to store in db
+    """
     column_names = data[0]
     all_data = []
     updated_data = {}
@@ -92,6 +103,11 @@ def transform_mbo_csv_data(data):
 
 
 def scrape_files(db, cursor, file_names):
+    """
+        Here we will read files with the csv modules and
+        get the validated and transformed data and load into db
+    """
+
     table_name = "peerfit_project"
     for file_name in file_names:
         file = open(file_name, 'rb')
@@ -153,7 +169,7 @@ def scrape_files(db, cursor, file_names):
                         vd['checked_in_at'],
                         vd['studio_address_street'],
                         vd['studio_address_city'],
-                        vd['studio_address_state'],
+                        vd['studio_address_state'].replace(" ", ""),
                         vd['studio_address_zip'],
                         vd['viewed_at'],
                         vd['reserved_at'],
