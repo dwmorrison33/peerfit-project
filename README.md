@@ -19,7 +19,7 @@ Your virtual environment should now be activated
 
 **Install required packages**
 ```sh
-pip install -r requirements.txt**
+pip install -r requirements.txt
 ```
 Now that you have the necessary python packages, clone the repo git@gitlab.com:dwmorrison33/peerfit-project.git and setup MySQL on your local machine.
 
