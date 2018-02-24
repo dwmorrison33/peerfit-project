@@ -29,10 +29,20 @@ Now that you have the necessary python packages, clone the repo git@gitlab.com:d
 $ sudo apt-get update
 $ sudo apt-get install mysql-server
 ```
-3. You need to start server like: **sudo service mysql restart** and then check status like: **sudo service mysql status**
-4. Sign in with the root user like:
-	**mysql -u root -p**
-5. Run the command: **CREATE DATABASE peerfit;**
+** Start mysql service**
+```sh
+sudo service mysql restart
+sudo service mysql status
+```
+**Login to MySQL**
+```sh
+mysql -u root -p
+```
+
+#### Create a database for the project
+```sh
+CREATE DATABASE peerfit;
+```
 
 You are all set with your database now. To create a table with all the data, from the project/solution directory:
 
