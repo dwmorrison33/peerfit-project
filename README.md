@@ -18,12 +18,24 @@ To install MySQL on your local machine, execute the following commands:
 	**mysql -u root -p**
 5. Run the command: **CREATE DATABASE peerfit;**
 
-You are all set with your database now. To create a table with all the data, execute a command similar to following from the project/solution directory:
+You are all set with your database now. To create a table with all the data, from the project/solution directory:
+
+####Usage
 
 ```sh
 $ python <name_of_script> <host> <user> <password> <database>
 ```
 
-Example exection command:  **python project_solution.py localhost root Password123 peerfit**
+* host - database host
+* user - database username
+* password - database password
+* database - name of your database
 
+####Example command
+
+```sh
+$ python python project_solution.py localhost root Password123 peerfit
+```
+
+####Final
 Thats it, you can now view all your data. If you entered the python command incorrectly, you should get a printout in your terminal that gives instuctions for Usage.
