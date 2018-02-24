@@ -1,0 +1,7 @@
+dateparser==0.7.0
+MySQL-python==1.2.5
+python-dateutil==2.6.1
+pytz==2018.3
+regex==2018.2.21
+six==1.11.0
+tzlocal==1.5.1
