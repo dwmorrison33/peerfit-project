@@ -4,14 +4,17 @@
 1. Across all reservation partners for January & February, how many completed reservations occurred?
 
 Found answer by the following query:
+```sh
 select count(*) from peerfit_project where signed_in_at between '2018-01-01 00:00:00' and '2018-03-01 00:00:00';
+```
 Output:
+```sh
 +----------+
 | count(*) |
 +----------+
 |      126 |
 +----------+
-
+```
 
 2. Which studio has the highest rate of reservation abandonement (did not cancel but did not check-in)?
 
