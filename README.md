@@ -60,7 +60,7 @@ $ python <name_of_script> <host> <user> <password> <database>
 #### Example command
 
 ```sh
-$ python python project_solution.py localhost root Password123 peerfit
+$ python project_solution.py localhost root Password123 peerfit
 ```
 
 #### Final
