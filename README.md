@@ -29,7 +29,7 @@ Now that you have the necessary python packages, clone the repo git@gitlab.com:d
 $ sudo apt-get update
 $ sudo apt-get install mysql-server
 ```
-** Start mysql service**
+**Start mysql service**
 ```sh
 sudo service mysql restart
 sudo service mysql status
@@ -44,7 +44,7 @@ mysql -u root -p
 CREATE DATABASE peerfit;
 ```
 
-You are all set with your database now. To create a table with all the data, from the project/solution directory:
+You are all set with your database now. To create a table with all the data, from the **project/solution** directory:
 
 #### Usage
 
