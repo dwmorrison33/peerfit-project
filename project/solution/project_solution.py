@@ -3,7 +3,6 @@ import sys
 import csv
 import glob
 
-
 def connect_to_db(hostname, username, password, database):
     db = MySQLdb.connect(
         host=hostname,
