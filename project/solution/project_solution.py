@@ -2,8 +2,6 @@ import MySQLdb
 import sys
 import csv
 import glob
-from datetime import datetime
-import re
 
 
 def connect_to_db(hostname, username, password, database):
